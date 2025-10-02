@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lab Report 2</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+    />
+  </head>
+  <body>
+    <section class="h-screen grid place-items-center">
+      <div
+        class="max-w-4xl mx-auto border border-gray-200 rounded-xl grid grid-cols-2 shadow-[2px_2px_20px_rgba(0,0,0,0.1)]"
+      >
+        <div>
+          <img
+            src="./image/uni-img.jpg"
+            alt=""
+            class="h-full w-full object-cover"
+          />
+        </div>
+        <div>
+          <form class="p-4">
+            <h2 class="text-2xl font-bold mb-4">Student / Teacher Info</h2>
+            <div class="space-y-4">
+              <div class="grid grid-cols-2 gap-2">
+                <div>
+                  <label
+                    for="name"
+                    class="block text-sm font-medium text-gray-700"
+                    >Name</label
+                  >
+                  <input
+                    type="name"
+                    id="name"
+                    class="mt-1 p-2 w-full border rounded-md"
+                  />
+                </div>
+                <div>
+                  <label
+                    for="email"
+                    class="block text-sm font-medium text-gray-700"
+                    >Email</label
+                  >
+                  <input
+                    type="email"
+                    id="email"
+                    class="mt-1 p-2 w-full border rounded-md"
+                  />
+                </div>
+              </div>
+              <div class="grid grid-cols-2 gap-2">
+                <div>
+                  <label
+                    for="gender"
+                    class="block text-sm font-medium text-gray-700"
+                    >Gender</label
+                  >
+                  <div class="relative">
+                    <select
+                      type="gender"
+                      id="gender"
+                      class="mt-1 p-2 w-full border rounded-md appearance-none relative"
+                    >
+                      <option value="">Select Gender</option>
+                      <option value="male">Male</option>
+                      <option value="female">Female</option>
+                    </select>
+                    <span
+                      class="absolute top-1/2 right-2 -translate-y-1/2 mt-0.5 pointer-events-none"
+                    >
+                      <i class="fa-solid fa-chevron-down"></i>
+                    </span>
+                  </div>
+                </div>
+                <div>
+                  <label
+                    for="phone"
+                    class="block text-sm font-medium text-gray-700"
+                    >Phone</label
+                  >
+                  <input
+                    type="number"
+                    id="phone"
+                    class="mt-1 p-2 w-full border rounded-md"
+                  />
+                </div>
+              </div>
+              <!-- A bit complex -->
+              <div class="w-full">
+                <!-- teacher -->
+                <input
+                  name="role"
+                  type="radio"
+                  id="teacher-radio"
+                  class="h-4 w-4 peer/teacher"
+                />
+                <label for="teacher-radio">Teacher</label>
+                <!-- student -->
+                <input
+                  name="role"
+                  type="radio"
+                  id="student-radio"
+                  class="h-4 w-4 peer/student ms-4"
+                />
+                <label for="student-radio">Student</label>
+                <!-- Teacher-specific fields -->
+                <div
+                  class="hidden grid-cols-2 gap-2 peer-checked/teacher:grid w-full mt-2"
+                >
+                  <div>
+                    <label
+                      for="department"
+                      class="block text-sm font-medium text-gray-700"
+                      >Department</label
+                    >
+                    <div class="relative">
+                      <select
+                        type="department"
+                        id="department"
+                        class="mt-1 p-2 w-full border rounded-md appearance-none relative"
+                      >
+                        <option value="">Select department</option>
+                        <option value="bba">BBA</option>
+                        <option value="cse">CSE</option>
+                        <option value="english">English</option>
+                        <option value="math">Math</option>
+                        <option value="eee">EEE</option>
+                        <option value="law">Law</option>
+                        <option value="economics">Economics</option>
+                        <option value="psychology">Psychology</option>
+                        <option value="pharmacy">Pharmacy</option>
+                      </select>
+                      <span
+                        class="absolute top-1/2 right-2 -translate-y-1/2 mt-0.5 pointer-events-none"
+                      >
+                        <i class="fa-solid fa-chevron-down"></i>
+                      </span>
+                    </div>
+                  </div>
+                  <div>
+                    <label
+                      for="speciality"
+                      class="block text-sm font-medium text-gray-700"
+                    >
+                      Speciality
+                    </label>
+                    <div class="relative">
+                      <select
+                        id="speciality"
+                        class="mt-1 p-2 w-full border rounded-md appearance-none relative"
+                      >
+                        <option value="">Select speciality</option>
+                        <option value="ai">AI</option>
+                        <option value="ml">ML</option>
+                        <option value="data_science">Data Science</option>
+                        <option value="networking">Networking</option>
+                        <option value="cyber_security">Cyber Security</option>
+                        <option value="marketing">Marketing</option>
+                        <option value="finance">Finance</option>
+                        <option value="hrm">HRM</option>
+                        <option value="literature">Literature</option>
+                        <option value="linguistics">Linguistics</option>
+                        <option value="pure_math">Pure Math</option>
+                        <option value="applied_math">Applied Math</option>
+                        <option value="robotics">Robotics</option>
+                        <option value="pharmacology">Pharmacology</option>
+                        <option value="constitutional_law">
+                          Constitutional Law
+                        </option>
+                      </select>
+                      <span
+                        class="absolute top-1/2 right-2 -translate-y-1/2 mt-0.5 pointer-events-none"
+                      >
+                        <i class="fa-solid fa-chevron-down"></i>
+                      </span>
+                    </div>
+                  </div>
+                </div>
+                <!-- Student-specific fields -->
+                <div
+                  class="hidden grid-cols-2 gap-2 peer-checked/student:grid w-full mt-2"
+                >
+                  <div>
+                    <label
+                      for="department"
+                      class="block text-sm font-medium text-gray-700"
+                      >Department</label
+                    >
+                    <div class="relative">
+                      <select
+                        type="department"
+                        id="department"
+                        class="mt-1 p-2 w-full border rounded-md appearance-none relative"
+                      >
+                        <option value="">Select department</option>
+                        <option value="bba">BBA</option>
+                        <option value="cse">CSE</option>
+                        <option value="english">English</option>
+                        <option value="math">Math</option>
+                        <option value="eee">EEE</option>
+                        <option value="law">Law</option>
+                        <option value="economics">Economics</option>
+                        <option value="psychology">Psychology</option>
+                        <option value="pharmacy">Pharmacy</option>
+                      </select>
+                      <span
+                        class="absolute top-1/2 right-2 -translate-y-1/2 mt-0.5 pointer-events-none"
+                      >
+                        <i class="fa-solid fa-chevron-down"></i>
+                      </span>
+                    </div>
+                  </div>
+                  <div>
+                    <label
+                      for="batch"
+                      class="block text-sm font-medium text-gray-700"
+                    >
+                      Batch
+                    </label>
+                    <div class="relative">
+                      <select
+                        id="batch"
+                        class="mt-1 p-2 w-full border rounded-md appearance-none relative"
+                      >
+                        <option value="">Select batch</option>
+                        <option value="55A">55A</option>
+                        <option value="55B">55B</option>
+                        <option value="56A">56A</option>
+                        <option value="56B">56B</option>
+                        <option value="57A">57A</option>
+                        <option value="57B">57B</option>
+                        <option value="58A">58A</option>
+                        <option value="58B">58B</option>
+                        <option value="59A">59A</option>
+                        <option value="59B">59B</option>
+                        <option value="60">60A</option>
+                        <option value="60">60B</option>
+                      </select>
+                      <span
+                        class="absolute top-1/2 right-2 -translate-y-1/2 mt-0.5 pointer-events-none"
+                      >
+                        <i class="fa-solid fa-chevron-down"></i>
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/js/all.min.js"></script>
+  </body>
+</html>
