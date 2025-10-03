@@ -11,22 +11,24 @@
     />
   </head>
   <body>
-    <section class="h-screen grid place-items-center">
+    <section class="h-screen grid place-items-center max-sm:py-4">
       <div
-        class="max-w-4xl mx-auto border border-gray-200 rounded-xl grid grid-cols-2 shadow-[2px_2px_20px_rgba(0,0,0,0.1)]"
+        class="max-w-11/12 mx-auto lg: mx-auto border border-gray-200 rounded-xl grid grid-cols-1 lg:grid-cols-2 shadow-[2px_2px_20px_rgba(0,0,0,0.1)]"
       >
         <div>
           <img
             src="./image/uni-img.jpg"
             alt=""
-            class="h-full w-full object-cover"
+            class="h-72 lg:h-full w-full object-contain lg:object-cover object-center"
           />
         </div>
         <div>
-          <form class="p-4">
-            <h2 class="text-2xl font-bold mb-4">Student / Teacher Info</h2>
+          <form class="p-6 lg:p-12">
+            <h2 class="max-sm:text-xl text-2xl font-bold mb-4">
+              Student / Teacher Info
+            </h2>
             <div class="space-y-4">
-              <div class="grid grid-cols-2 gap-2">
+              <div class="grid sm:grid-cols-2 gap-2">
                 <div>
                   <label
                     for="name"
@@ -37,6 +39,7 @@
                     type="name"
                     id="name"
                     class="mt-1 p-2 w-full border rounded-md"
+                    placeholder="Enter Name"
                   />
                 </div>
                 <div>
@@ -49,10 +52,11 @@
                     type="email"
                     id="email"
                     class="mt-1 p-2 w-full border rounded-md"
+                    placeholder="Your Email"
                   />
                 </div>
               </div>
-              <div class="grid grid-cols-2 gap-2">
+              <div class="grid sm:grid-cols-2 gap-2">
                 <div>
                   <label
                     for="gender"
@@ -63,9 +67,11 @@
                     <select
                       type="gender"
                       id="gender"
-                      class="mt-1 p-2 w-full border rounded-md appearance-none relative"
+                      class="mt-1 p-2 w-full border rounded-md appearance-none relative text-gray-400 has-[option:checked:not([value=''])]:text-gray-700"
                     >
-                      <option value="">Select Gender</option>
+                      <option value="" selected disabled hidden>
+                        Select Gender
+                      </option>
                       <option value="male">Male</option>
                       <option value="female">Female</option>
                     </select>
@@ -86,6 +92,7 @@
                     type="number"
                     id="phone"
                     class="mt-1 p-2 w-full border rounded-md"
+                    placeholder="Phone Number"
                   />
                 </div>
               </div>
@@ -98,7 +105,7 @@
                 <input
                   type="date"
                   id="date-of-birth"
-                  class="mt-1 p-2 w-full border rounded-md"
+                  class="mt-1 p-2 w-full border rounded-md placeholder:text-red-500"
                 />
               </div>
               <!-- A bit complex -->
@@ -122,7 +129,7 @@
                 <label for="student-radio">Student</label>
                 <!-- Teacher-specific fields -->
                 <div
-                  class="hidden grid-cols-2 gap-2 peer-checked/teacher:grid w-full mt-2"
+                  class="hidden sm:grid-cols-2 gap-2 peer-checked/teacher:grid w-full mt-2"
                 >
                   <div>
                     <label
@@ -134,9 +141,11 @@
                       <select
                         type="department"
                         id="department"
-                        class="mt-1 p-2 w-full border rounded-md appearance-none relative"
+                        class="mt-1 p-2 w-full border rounded-md appearance-none relative text-gray-400 has-[option:checked:not([value=''])]:text-gray-700"
                       >
-                        <option value="">Select department</option>
+                        <option value="" selected disabled hidden>
+                          Select department
+                        </option>
                         <option value="bba">BBA</option>
                         <option value="cse">CSE</option>
                         <option value="english">English</option>
@@ -164,9 +173,11 @@
                     <div class="relative">
                       <select
                         id="speciality"
-                        class="mt-1 p-2 w-full border rounded-md appearance-none relative"
+                        class="mt-1 p-2 w-full border rounded-md appearance-none relative text-gray-400 has-[option:checked:not([value=''])]:text-gray-700"
                       >
-                        <option value="">Select speciality</option>
+                        <option value="" selected disabled hidden>
+                          Select speciality
+                        </option>
                         <option value="ai">AI</option>
                         <option value="ml">ML</option>
                         <option value="data_science">Data Science</option>
@@ -195,7 +206,7 @@
                 </div>
                 <!-- Student-specific fields -->
                 <div
-                  class="hidden grid-cols-2 gap-2 peer-checked/student:grid w-full mt-2"
+                  class="hidden sm:grid-cols-2 gap-2 peer-checked/student:grid w-full mt-2"
                 >
                   <div>
                     <label
@@ -207,9 +218,11 @@
                       <select
                         type="department"
                         id="department"
-                        class="mt-1 p-2 w-full border rounded-md appearance-none relative"
+                        class="mt-1 p-2 w-full border rounded-md appearance-none relative text-gray-400 has-[option:checked:not([value=''])]:text-gray-700"
                       >
-                        <option value="">Select department</option>
+                        <option value="" selected disabled hidden>
+                          Select department
+                        </option>
                         <option value="bba">BBA</option>
                         <option value="cse">CSE</option>
                         <option value="english">English</option>
@@ -237,9 +250,11 @@
                     <div class="relative">
                       <select
                         id="batch"
-                        class="mt-1 p-2 w-full border rounded-md appearance-none relative"
+                        class="mt-1 p-2 w-full border rounded-md appearance-none relative text-gray-400 has-[option:checked:not([value=''])]:text-gray-700"
                       >
-                        <option value="">Select batch</option>
+                        <option value="" selected disabled hidden>
+                          Select batch
+                        </option>
                         <option value="55A">55A</option>
                         <option value="55B">55B</option>
                         <option value="56A">56A</option>
